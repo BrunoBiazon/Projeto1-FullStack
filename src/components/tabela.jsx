@@ -9,15 +9,21 @@ import Paper from "@mui/material/Paper";
 
 
 /**
- * @param {{ foods: Array<{ food_id: string|number, food_name: string, food_description: string, calories: string|number, nutriments?: any }> }} props
+ * @param {{
+ *   foods: Array<{ food_id: string|number, food_name: string, food_description: string, calories: string|number, nutriments?: any }>,
+ *   hasSearched?: boolean
+ * }} props
  */
-export default function FoodTable({ foods }) {
+export default function FoodTable({ foods, hasSearched = false }) {
   const [selectedFood, setSelectedFood] = useState(null);
 
   if (!foods || foods.length === 0) {
-    return <p>Nenhum alimento encontrado.</p>;
+    if (hasSearched) {
+      return <p>Nenhum alimento encontrado.</p>;
+    } else {
+      return null;
+    }
   }
-
   return (
     <> 
       {/* Tabela principal de alimentos */}
