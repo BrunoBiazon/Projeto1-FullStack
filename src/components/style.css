@@ -1,4 +1,3 @@
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -6,7 +5,7 @@
 
   color-scheme: light;
   color: #181818;
-  background-color: #f3f3f3;
+  background-color: #f8f7f7;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,7 +20,7 @@ html, body, #root {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 500px;
   min-height: 100vh;
   background: #f3f1f1; 
   -webkit-font-smoothing: antialiased;
@@ -76,8 +75,10 @@ body {
 }
 
 .food-table-container {
-  background: #ffffff;
+  max-height: 500px;   
+  overflow-y: auto;    
 }
+
 
 .table-head-cell { 
   font-weight: bold !important; /* mudei o css do MUI */
@@ -109,7 +110,7 @@ body {
 }
 
 .modal-content {
-  background: #e0e0e0;
+  background: #ffffff;
   padding: 32px;
   border-radius: 12px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.2);
@@ -123,7 +124,7 @@ body {
   top: 16px;
   right: 16px;
   background: #1976d2;
-  color: #fff;
+  color: #fdfdfd;
   border: none;
   border-radius: 6px;
   padding: 8px 16px;
@@ -139,7 +140,7 @@ body {
 }
 
 .nutriments-table {
-  min-width: 400px;
+  min-width: 200px;
 }
 
 .btn-reset {
@@ -162,19 +163,32 @@ body {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 .app-button:hover {
   border-color: #646cff;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  .app-button {
-    background-color: #f9f9f9;
-  }
+body {
+  background-color: #fffdfd;
+  color: #213547;
+}
+
+a {
+  color: #1a73e8;
+}
+
+.a {
+  background-color: #f9f9f9;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
 }
