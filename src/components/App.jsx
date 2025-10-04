@@ -42,7 +42,7 @@ export default function App() {
 
   return (
   <div className="app-container">
-    <h1 className="app-title">Saiba os Macros</h1>
+    <h1 className="app-title">Buscar Alimentos</h1>
 
     <div className="search-row">
       <TextField
