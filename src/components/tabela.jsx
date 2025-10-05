@@ -24,6 +24,7 @@ export default function FoodTable({ foods, hasSearched = false }) {
       return null;
     }
   }
+  
   return (
     <> 
       {/* Tabela principal de alimentos */}

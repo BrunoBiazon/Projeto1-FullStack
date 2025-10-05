@@ -7,19 +7,19 @@ import "./style.css";
 function MenuHeader() {
   return (
     <div className="menu-Header">
-      <Tooltip title="Calorias totais dos alimentos selecionados">
+      <Tooltip title="Representam a quantidade de energia que o corpo obtém dos alimentos ou gasta nas atividades. o Balanço delas define ganho ou perda de peso(Déficit calórico , Superávit calórico).">
         <div className="menu-item">Calorias</div>
       </Tooltip>
 
-      <Tooltip title="Carboidratos totais dos alimentos selecionados">
+      <Tooltip title="Principal fonte de energia rápida para o corpo e o cérebro. São convertidos em glicose para manter funções vitais e atividades do dia a dia.">
         <div className="menu-item">Carboidratos</div>
       </Tooltip>
 
-      <Tooltip title="Proteínas totais dos alimentos selecionados">
+      <Tooltip title="Responsáveis pela construção e reparo dos tecidos, incluindo músculos, pele e órgãos. Também participam da produção de enzimas e hormônios.">
         <div className="menu-item">Proteínas</div>
       </Tooltip>
 
-      <Tooltip title="Gorduras totais dos alimentos selecionados">
+      <Tooltip title="Fornecem energia de longa duração, ajudam na absorção de vitaminas (A, D, E e K) e protegem órgãos vitais. Também participam de funções hormonais.">
         <div className="menu-item">Gorduras</div>
       </Tooltip>
       <Tooltip title="API">

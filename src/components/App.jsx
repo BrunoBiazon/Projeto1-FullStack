@@ -30,10 +30,14 @@ export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleSearch = async () => {
-    if (!state.query) return;
+    if (!state.query.trim()) return;
     dispatch({ type: "SEARCH_START" });
     try {
       const results = await searchFood(state.query);
+      if (!results || results.length === 0) {
+        dispatch({ type: "SEARCH_ERROR", payload: "ERRO: não achado na API" });
+        return;
+      }
       dispatch({ type: "SEARCH_SUCCESS", payload: results });
     } catch (error) {
       dispatch({ type: "SEARCH_ERROR", payload: "Erro ao buscar alimentos." });
