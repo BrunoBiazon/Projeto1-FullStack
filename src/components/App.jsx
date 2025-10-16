@@ -4,7 +4,7 @@ import { searchFood } from "../contexts/api";
 import FoodTable from "./tabela";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-
+/*
 const initialState = {
   query: "",
   foods: [],
@@ -25,7 +25,7 @@ function reducer(state, action) {
     default:
       return state;
   }
-}
+} */
 
 export default function App() {
   const { state, dispatch } = useContext(FoodContext);
