@@ -4,28 +4,6 @@ import { searchFood } from "../contexts/api";
 import FoodTable from "./tabela";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-/*
-const initialState = {
-  query: "",
-  foods: [],
-  loading: false,
-  error: null,
-};
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "SET_QUERY":
-      return { ...state, query: action.payload };
-    case "SEARCH_START":
-      return { ...state, loading: true, error: null };
-    case "SEARCH_SUCCESS":
-      return { ...state, loading: false, foods: action.payload };
-    case "SEARCH_ERROR":
-      return { ...state, loading: false, error: action.payload };
-    default:
-      return state;
-  }
-} */
 
 export default function App() {
   const { state, dispatch } = useContext(FoodContext);
