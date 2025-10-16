@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 import App from './App.jsx';
-import Footer from './footer.jsx';
+import Footer from './Footer.jsx';
 import Header from './Header.jsx';
 import MenuHeader from './MenuHeader.jsx';
 import { FoodProvider } from "../contexts/FoodContext";
