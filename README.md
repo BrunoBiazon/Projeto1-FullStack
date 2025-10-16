@@ -14,6 +14,9 @@ O projeto desenvolvido serve como uma busca de alimentos. Informando as calorias
 ## Hooks 
 - userReducer
 
+## Deploy
+- https://projeto1-web-full-stack.vercel.app
+
 ## Prévia
 
 <img width="1877" height="932" alt="image" src="https://github.com/user-attachments/assets/c8636e41-fcbc-4540-9cbd-46dd9edac8d5" />
