@@ -1,4 +1,5 @@
-import React, { useReducer } from "react";
+import React, { useContext } from "react";
+import { FoodContext } from "../contexts/FoodContext"; 
 import { searchFood } from "../contexts/api";
 import FoodTable from "./tabela";
 import TextField from "@mui/material/TextField";
@@ -27,22 +28,25 @@ function reducer(state, action) {
 }
 
 export default function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const { state, dispatch } = useContext(FoodContext);
 
   const handleSearch = async () => {
-    if (!state.query.trim()) return;
-    dispatch({ type: "SEARCH_START" });
-    try {
-      const results = await searchFood(state.query);
-      if (!results || results.length === 0) {
-        dispatch({ type: "SEARCH_ERROR", payload: "ERRO: não achado na API" });
-        return;
-      }
-      dispatch({ type: "SEARCH_SUCCESS", payload: results });
-    } catch (error) {
-      dispatch({ type: "SEARCH_ERROR", payload: "Erro ao buscar alimentos." });
+  if (!state.query.trim()) {
+    dispatch({ type: "SEARCH_ERROR", payload: "Digite algo para pesquisar." });
+    return;
+  }
+  dispatch({ type: "SEARCH_START" });
+  try {
+    const results = await searchFood(state.query);
+    if (!results || results.length === 0) {
+      dispatch({ type: "SEARCH_ERROR", payload: "ERRO: não achado na API" });
+      return;
     }
-  };
+    dispatch({ type: "SEARCH_SUCCESS", payload: results });
+  } catch (error) {
+    dispatch({ type: "SEARCH_ERROR", payload: "Erro ao buscar alimentos." });
+  }
+};
 
   return (
   <div className="app-container">

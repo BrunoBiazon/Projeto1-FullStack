@@ -6,12 +6,15 @@ import App from './App.jsx';
 import Footer from './footer.jsx';
 import Header from './Header.jsx';
 import MenuHeader from './MenuHeader.jsx';
+import { FoodProvider } from "../contexts/FoodContext";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Header />
-    <MenuHeader />
-    <App />
-    <Footer />
+    <FoodProvider>
+      <Header />
+      <MenuHeader />
+      <App />
+      <Footer />
+    </FoodProvider>
   </StrictMode>
 );
